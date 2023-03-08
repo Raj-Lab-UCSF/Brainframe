@@ -130,7 +130,7 @@ validRenderer = @(x) strcmp(x,'opengl') || strcmp(x,'painters');
 validImg = @(x) strcmp(x,'png') || strcmp(x,'jpg') || strcmp(x,'tiffn');
 validCentered = @(x) validBoolean(x(1)) && validScalar(x(2)) && length(x) == 2;
 validConarrow = @(x) validNonnegative(x) && length(x) == 2;
-validNorm = @(x) ismember(x,{'mean','max','minmax','sum','euclidean'});
+validNorm = @(x) ismember(x,{'mean','max','minmax','sum','euclidean','none'});
 validView = @(x) isnumeric(x) && (size(x,2) == 3 || size(x,2) == 2);
 
 addParameter(ip, 'voxUreg', voxUreg_, validBoolean);

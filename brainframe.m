@@ -56,6 +56,8 @@ if voxUreg
         normvec = (scalevec - min(scalevec))/ (max(scalevec) - min(scalevec));
     elseif strcmp(input_struct.norm_method,'euclidean')
         normvec = scalevec / norm(scalevec,2);
+    elseif strcmp(input_struct.norm_method,'none')
+        normvec = scalevec;
     end
     normvec = normvec * scalefac;
     ptsz = input_struct.pointsize;
@@ -91,7 +93,7 @@ if voxUreg
                 %Setting up diffuse random point clouds per region
                 elseif ~input_struct.sphere && ~input_struct.centered(1)
                     rng(k);
-                    randinds = randi(length(pcinds),ceil(normvals(k)*length(pcinds)^(1/3)),1);
+                    randinds = randi(length(pcinds),ceil(normvals(k)*length(pcinds)),1);
 %                     randinds = randi(length(pcinds),ceil(normvals(k)),1);
                     chosevox = [y(randinds) x(randinds) z(randinds)];
                     centroid = chosevox + rand(size(chosevox,1),3);
