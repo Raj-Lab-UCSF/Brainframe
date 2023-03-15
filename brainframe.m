@@ -40,7 +40,7 @@ if voxUreg
     %Per-region rendering
     %Setting up data, per region
     groupid = input_struct.region_groups;
-    idlist = unique(groupid);
+    idlist = min(groupid):max(groupid);
     is0 = (idlist==0);
     idlist(is0) = [];
     scalefac = input_struct.xfac;
@@ -71,7 +71,6 @@ if voxUreg
         reginds = find(groupid==curid);
         centers = [0 0 0];
         normvals = normvec(reginds);
-        
         for k = 1:length(reginds)
             curreg = reginds(k);
             pcinds = find(CCFinds==curreg);
