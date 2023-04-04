@@ -43,7 +43,7 @@ img_renderer_ = 'opengl';
 
 %Field to set image views to save at; must be n x 3 (axis) or n x 2
 %(angles)
-img_views_ = [[0 0 1]; [-1 0 0]; [0 -1 0]];
+img_views_ = [[0 0 1]; [-1 0 0]; [0 1 0]];
 
 %Field for entering your data to be visualized over the space of the brain
 %This field is a vector of values for per-region data that is n-regions long
