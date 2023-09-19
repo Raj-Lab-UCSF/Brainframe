@@ -1,4 +1,4 @@
-# Brainframe
+# Brainframe v1.0
 [Chris Mezias](https://github.com/chm2062) & [Justin Torok](https://github.com/justin-torok)
 
 MATLAB functionality for creating 3D human & mouse brain renderings, with many options. This is a tool for visualizing per-voxel or per-region data, as well as connectome data, in a 3D surface representation of a brain. This function has been tested for and works using mice and human brain atlases, but may well work with other species' brains. Further help including use case examples can be found in the script `brainframe_Help.m`.
